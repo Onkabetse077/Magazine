@@ -46,6 +46,12 @@ html{
     object-fit:cover;
   }
 
+  /*Step 60,61*/
+  hr{
+    margin:1.5rem 0;
+    border:1px solid rgba(120, 120, 120, 0.6);
+  }
+
   /*Step 36,38,39,40*/
   .heading{
     grid-column:2/3;
@@ -89,7 +95,7 @@ html{
         font-family:Raleway,sans-serif;
       }
 
-      /*step 48*/
+      /*Step 48*/
       .author-name a:hover{
         background-color:#306203;
       }
@@ -107,4 +113,105 @@ html{
         grid-auto-flow:column;
         grid-auto-columns:1fr;
         align-items:center;
+      }
+
+      /*Step 58*/
+      .first-paragraph::first-letter{
+        font-size:6rem;
+        color:orangered;
+        float:left;
+        margin-right:1rem;
+      }
+
+      /*Step 62,63*/
+      .quote{
+        color:#00beef;
+        font-size:2.4rem;
+        text-align:center;
+        font-family: "Raleway", sans-serif;
+      }
+
+      /*Step 64*/
+      .quote::before{
+        content:'" ';
+      }
+      
+      /*Step 64*/
+      .quote::after{
+        content:' "';
+      }
+
+      /*Step 65,66,67*/
+      .text-with-images{
+        display:grid;
+        grid-template-columns:1fr 2fr;
+        column-gap:3rem;
+        margin-bottom:3rem;
+      }
+
+      /*Step 68,69*/
+      .lists{
+        list-style-type:none;
+        margin-top: 2rem;
+      }
+
+      /*Step 70*/
+      .lists li{
+        margin-bottom: 1.5rem;
+      }
+
+      /*Step 71*/
+      .list-title, .list-subtitle{
+        color:#00beef;
+      }
+
+      /*Step 72,73,74,75*/
+      .image-wrapper{
+        display:grid;
+        grid-template-columns:2fr 1fr;
+        grid-template-rows:repeat(3, min-content);
+        gap:2rem;
+        place-items:center;
+      }
+
+      /*Step 76*/
+      .image-1, .image-3{
+        grid-column:1/-1;
+      }
+
+      /*Step 77*/
+      @media only screen and (max-width: 720px) {
+        .image-wrapper {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /*Step 78*/
+      @media only screen and (max-width: 600px) {
+        .text-with-images {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /*Step 79*/
+      @media only screen and (max-width: 550px) {
+        .hero-title{
+          font-size:6rem;
+        }
+        .hero-subtitle, .author, .quote, .list-title{
+          font-size:1.8rem;
+        }
+        .social-icons{
+          font-size:2rem;
+        }
+        .text{
+          font-size:1.6rem;
+        }
+      }
+
+      /*Step 80*/
+      @media only screen and (max-width: 420px) {
+        .hero-title {
+          font-size: 4.5rem;
+        }
       }
